@@ -90,7 +90,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 500
+                            Rs. <span class="price-value">500</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -110,7 +110,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 500
+                            Rs. <span class="price-value">500</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -130,7 +130,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 350
+                            Rs. <span class="price-value">350</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -150,7 +150,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 350
+                            Rs. <span class="price-value">350</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -173,7 +173,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 800
+                            Rs. <span class="price-value">800</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -187,13 +187,13 @@
                 <div class="item">
                     <img src="./assets/img/premium-2.webp" class="item-image" />
                     <div class="item-content">
-                        <h5 class="item-title">ؐMessy Meat Burger</h5>
+                        <h5 class="item-title">Messy Meat Burger</h5>
                         <p class="item-details">With even more meat!</p>
                         <p class="item-price">
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 800
+                            Rs. <span class="price-value">800</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -216,7 +216,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 800
+                            Rs. <span class="price-value">800</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -236,7 +236,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 800
+                            Rs. <span class="price-value">800</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -256,7 +256,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 1300
+                            Rs. <span class="price-value">1300</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -279,7 +279,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 660
+                            Rs. <span class="price-value">660</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -299,7 +299,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 660
+                            Rs. <span class="price-value">660</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -319,7 +319,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 660
+                            Rs. <span class="price-value">660</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -339,7 +339,7 @@
                             <span class="material-icons">
                                 sell
                             </span>
-                            Rs. 660
+                            Rs. <span class="price-value">660</span>
                         </p>
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-warning btn-sm add-cart">
@@ -374,10 +374,30 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script>
+        if (!localStorage.getItem('cart')) {
+            localStorage.setItem('cart', '[]');
+        }
         const toastLiveExample = document.getElementById('liveToast');
         $('.add-cart').on('click', function () {
             const toast = new bootstrap.Toast(toastLiveExample, { delay: 2000 });
             toast.show();
+            var item = $(this).parents('.item');
+            var title = item.find('.item-title').text();
+            var image = item.find('.item-image').attr('src');
+            var price = parseFloat(item.find('.price-value').text());
+            var cart = JSON.parse(localStorage.getItem('cart'));
+            var object = cart.find((prop) => prop.title == title);
+            if (object) {
+                object.quantity++;
+            } else {
+                cart.push({
+                    title: title,
+                    image: image,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
         });
     </script>
 </body>

@@ -51,7 +51,21 @@
 
   <div class="content container">
     <h4 class="heading">My Cart</h4>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="cart-tbody">
+      </tbody>
+    </table>
+    <p style="font-weight: bold;" id="total-line"></p>
     <div style="text-align: right;">
+      <button type="button" id="clear" class="btn btn-danger">Clear Cart</button>
       <a href="checkout.html" class="btn btn-primary">Checkout</a>
     </div>
   </div>
@@ -65,6 +79,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+  <script>
+    if (!localStorage.getItem('cart')) {
+      localStorage.setItem('cart', '[]');
+    }
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    var total = 0;
+    cart.forEach(item => {
+      let html = '<tr><td><img src="' + item.image + '">' + item.title + '</td>';
+      html += '<td>' + item.price + '</td>';
+      html += '<td>' + item.quantity + '</td>';
+      html += '<td>' + item.quantity * item.price + '</td>';
+      total += item.quantity * item.price;
+      $('#cart-tbody').append(html);
+    });
+    $("#clear").click(function() {
+      localStorage.setItem('cart', '[]');
+      window.location.reload();
+    });
+    $('#total-line').text('Your total is Rs. ' + total + ' only.');
+  </script>
 </body>
 
 </html>

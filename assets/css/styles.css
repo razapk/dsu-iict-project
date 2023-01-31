@@ -130,6 +130,18 @@ h6 {
     vertical-align: middle;
 }
 
+#cart-table {
+    width: 100%;
+}
+
+#cart-tbody img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
 @media screen and (max-width: 700px) {
     .carousel-img {
         height: 60vw;
