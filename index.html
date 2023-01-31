@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <title>Nasir Burgers</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/img/logo.png" alt="Logo" class="d-inline-block">
+                <span>Nasir Burgers</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div style="flex: 1 1 0px"></div>
+                <ul class="navbar-nav me-auto mb-2 ml-auto mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <span class="material-icons">
+                                shopping_cart
+                            </span>
+                            Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="carousel" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/slide-1.jpg" class="d-block w-100 carousel-img" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/slide-2.jpg" class="d-block w-100 carousel-img" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/slide-3.jpg" class="d-block w-100 carousel-img" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="content container">
+        <h4 class="heading">Gourmet Fries</h4>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/fries-1.jpg" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Sriracha Loaded Fries</h5>
+                        <p class="item-details">Extreme italian loaded fries</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 500
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/fries-2.jpg" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Cheese Burger Fries</h5>
+                        <p class="item-details">For burger kids only</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 500
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/fries-3.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Wild Fries</h5>
+                        <p class="item-details">Simple fries with no addons</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 350
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/fries-4.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Mayo Garlic Fries</h5>
+                        <p class="item-details">Kinda fries you buy on an ordinary shop</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 350
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="heading">Premium Burgers</h4>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/premium-1.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Crunchos Burger</h5>
+                        <p class="item-details">Juicy beefy burger</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 800
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/premium-2.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">ؐMessy Meat Burger</h5>
+                        <p class="item-details">With even more meat!</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 800
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="heading">Stack Burgers</h4>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/stack-1.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Beef Veggie Double Patty</h5>
+                        <p class="item-details">Extra vegetables</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 800
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/stack-2.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Beef Cheese Double Patty</h5>
+                        <p class="item-details">With extra cheese</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 800
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/stack-3.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Belt Bust</h5>
+                        <p class="item-details">Open your mouth wide</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 1300
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="heading">Extreme Burgers</h4>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/extreme-1.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Firebird</h5>
+                        <p class="item-details">Crispy Chicken Burger</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 660
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/extreme-2.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Chicken Smoky</h5>
+                        <p class="item-details">Designed for smokers</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 660
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/extreme-3.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Beef Smoky</h5>
+                        <p class="item-details">Designed for hard smokers</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 660
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="item">
+                    <img src="./assets/img/extreme-4.webp" class="item-image" />
+                    <div class="item-content">
+                        <h5 class="item-title">Chick 'n Crisp</h5>
+                        <p class="item-details">Something very tasty</p>
+                        <p class="item-price">
+                            <span class="material-icons">
+                                sell
+                            </span>
+                            Rs. 660
+                        </p>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-warning btn-sm add-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            Created with ❤️ by <a href="https://mraza.me">Muhammad Raza</a>.
+        </div>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="assets/img/logo.png" style="width: 20px;" class="rounded me-2" alt="...">
+                <strong class="me-auto">Nasir Burgers</strong>
+                <small>Just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Added to cart
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script>
+        const toastLiveExample = document.getElementById('liveToast');
+        $('.add-cart').on('click', function () {
+            const toast = new bootstrap.Toast(toastLiveExample, { delay: 2000 });
+            toast.show();
+        });
+    </script>
+</body>
+
+</html>

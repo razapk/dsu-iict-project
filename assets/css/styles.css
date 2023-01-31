@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: #f5f5f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.carousel-img {
+    display: none;
+    width: 100vw;
+    height: 30vw;
+    object-fit: cover;
+}
+
+.navbar {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    padding: 10px 0px;
+}
+
+.navbar-brand img {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.navbar-brand span {
+    line-height: 35px;
+    vertical-align: middle;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.nav-item {
+    padding: 10px 10px;
+    border-radius: 4px;
+}
+
+.nav-item .nav-link {
+    color: black;
+}
+
+.nav-item .nav-link.active {
+    color: #e07109;
+}
+
+.nav-item:hover {
+    background-color: #e0e0e0;
+}
+
+.content {
+    padding: 20px 0px;
+}
+
+.heading {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.footer {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #052233;
+    color: #888888;
+}
+
+.footer .container {
+    padding: 20px 15px;
+}
+
+.content {
+    padding: 10px;
+}
+
+.item {
+    box-shadow: 0 0 1.25rem 0.2rem rgb(0 0 0 / 8%);
+    display: flex;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.item-image {
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.item-content {
+    margin-left: 15px;
+    flex: 1 1 0px;
+}
+
+.item-title {
+    font-weight: 600;
+}
+
+.item-details {
+    font-weight: 300;
+}
+
+.item-price {
+    color: #008811;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 700px) {
+    .carousel-img {
+        height: 60vw;
+    }
+
+    .item-image {
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+    }
+}
