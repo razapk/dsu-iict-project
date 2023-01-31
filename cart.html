@@ -51,18 +51,20 @@
 
   <div class="content container">
     <h4 class="heading">My Cart</h4>
-    <table id="cart-table">
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody id="cart-tbody">
-      </tbody>
-    </table>
+    <div style="overflow-x: auto;">
+      <table id="cart-table" class="table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="cart-tbody">
+        </tbody>
+      </table>
+    </div>
     <p style="font-weight: bold;" id="total-line"></p>
     <div style="text-align: right;">
       <button type="button" id="clear" class="btn btn-danger">Clear Cart</button>
@@ -93,7 +95,7 @@
       total += item.quantity * item.price;
       $('#cart-tbody').append(html);
     });
-    $("#clear").click(function() {
+    $("#clear").click(function () {
       localStorage.setItem('cart', '[]');
       window.location.reload();
     });

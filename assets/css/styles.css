@@ -132,6 +132,7 @@ h6 {
 
 #cart-table {
     width: 100%;
+    min-width: 400px;
 }
 
 #cart-tbody img {
