@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Gourmet Fries",
+        "data": [
+            {
+                "name": "Sriracha Loaded Fries",
+                "description": "Extreme italian loaded fries",
+                "price": 500,
+                "image": "https://razapk.github.io/dsu-iict-project/assets/img/fries-1.jpg"
+            },
+            {
+                "name": "Cheese Burger Fries",
+                "description": "For burger kids only",
+                "price": 500,
+                "image": "https://razapk.github.io/dsu-iict-project/assets/img/fries-2.jpg"
+            },
+            {
+                "name": "Wild Fries",
+                "description": "Simple fries with no addons",
+                "price": 350,
+                "image": "https://razapk.github.io/dsu-iict-project/assets/img/fries-3.jpg"
+            },
+            {
+                "name": "Mayo Garlic Fries",
+                "description": "Kinda fries you buy on an ordinary shop",
+                "price": 350,
+                "image": "https://razapk.github.io/dsu-iict-project/assets/img/fries-4.jpg"
+            }
+        ]
+    }
+]
